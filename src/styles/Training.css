@@ -1,0 +1,241 @@
+.training-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.training-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.training-header h1 {
+  font-size: 48px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.training-header p {
+  font-size: 18px;
+  color: #666;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.training-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+}
+
+.training-level {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.training-card h3 {
+  font-size: 22px;
+  color: #333;
+  margin: 30px 0 10px 0;
+  line-height: 1.4;
+}
+
+.training-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.training-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.duration {
+  font-size: 14px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.type {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #eee;
+  border-radius: 10px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+.training-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  margin-top: 15px;
+}
+
+.training-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.training-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.training-content {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  animation: slideDown 0.3s ease;
+}
+
+.content-body {
+  margin-bottom: 15px;
+}
+
+.content-body p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.training-video {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: 15px;
+  border: none;
+}
+
+.complete-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.complete-btn:hover {
+  transform: scale(1.05);
+}
+
+.back-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-5px);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode */
+body.dark-mode .training-card {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .training-card h3 {
+  color: #fff;
+}
+
+body.dark-mode .training-card p {
+  color: #b0b0b0;
+}
+
+body.dark-mode .training-meta {
+  border-color: #444;
+}
+
+body.dark-mode .training-content {
+  background: #1a1a1a;
+}
+
+body.dark-mode .training-header p {
+  color: #b0b0b0;
+}
+
+@media (max-width: 768px) {
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-header h1 {
+    font-size: 32px;
+  }
+}
